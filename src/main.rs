@@ -13,7 +13,7 @@ fn main() {
     let relevant_args = &args[1..];
     let mut iter = relevant_args.iter().peekable();
     while let Some(arg) = iter.next() {
-        arg.chars().for_each(|c| print!("{}", slackify(c)));
+        arg.chars().for_each(|c| print!("{}", slackify(c.to_ascii_lowercase())));
         if iter.peek().is_some() { print!(":blank:"); }
     }
     println!();
