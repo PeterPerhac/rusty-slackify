@@ -9,9 +9,8 @@ fn slackify(c: char) -> String {
 }
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    let relevant_args = &args[1..];
-    let mut iter = relevant_args.iter().peekable();
+    let args: Vec<String> = env::args().skip(1).collect();
+    let mut iter = args.iter().peekable();
     while let Some(arg) = iter.next() {
         arg.chars().for_each(|c| print!("{}", slackify(c.to_ascii_lowercase())));
         if iter.peek().is_some() { print!(":blank:"); }
