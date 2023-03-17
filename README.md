@@ -1,6 +1,6 @@
 # Slackify
 
-Turns the program argument into a series of slack-emoji letters, leaving punctuation alone and replacing whitespace with `:blank:` emoji. It's up to you to load the "blank" emoji into your Slack workspace:
+Turns the program argument into a series of slack-emoji letters, leaving punctuation alone and replacing whitespace with `:blank:` emoji. It's up to you to load the "blank" emoji into your Slack workspace (help yourself to `blank.png` file from this repository, yummy!):
 
 e.g.
 
